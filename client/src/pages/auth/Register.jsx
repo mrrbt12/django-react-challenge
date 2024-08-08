@@ -8,6 +8,7 @@ export default function Register() {
     const first_name = useRef()
     const last_name = useRef()
     const email = useRef()
+    const ethereumWalletAdd = useRef()
     const password = useRef()
     const password2 = useRef(undefined)
 
@@ -18,6 +19,7 @@ export default function Register() {
             first_name: first_name.current.value,
             last_name: last_name.current.value,
             email: email.current.value,
+            ethereum_wallet_address: ethereumWalletAdd.current.value,
             password: password.current.value,
             password2: password2.current.value
           };
@@ -48,6 +50,9 @@ export default function Register() {
                 </div>
                 <div className="mb-3">
                     <input type="email" placeholder='Email' autoComplete='off' className='form-control' id="email" ref={email} />
+                </div>
+                <div className="mb-3">
+                    <input type="text" placeholder='Ethereum Wallet Address' autoComplete='off' className='form-control' id="ethereum_wallet_address" ref={ethereumWalletAdd} />
                 </div>
                 <div className="mb-3">
                     <input type="password" placeholder='Password' autoComplete='off' className='form-control' id="password" ref={password} />
