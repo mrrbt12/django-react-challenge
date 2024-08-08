@@ -26,6 +26,11 @@ class Migration(migrations.Migration):
             name='last_name',
             field=models.CharField(default='Default last name', max_length=50),
         ),
+        migrations.AddField(
+            model_name='user',
+            name='ethereum_wallet_address',
+            field=models.CharField(max_length=42),
+        ),
         migrations.CreateModel(
             name='Profile',
             fields=[
